@@ -1,4 +1,3 @@
-require_relative '../config/environment'
 class User < ActiveRecord::Base
   has_many :reviews
   has_many :releases, through: :reviews
