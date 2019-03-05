@@ -5,6 +5,8 @@ class ReviewTable < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :content
       t.integer :score
+      t.integer :user
+      t.integer :release
     end
   end
 
