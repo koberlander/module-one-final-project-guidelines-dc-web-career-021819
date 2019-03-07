@@ -4,28 +4,20 @@ require 'rest-client'
 require 'JSON'
 require 'pry'
 
-def grabber
-  response_string = RestClient.get('https://evening-citadel-85778.herokuapp.com:443/whiskey/')
-  response_hash = JSON.parse(response_string)
-  response_hash["results"].each do |result|
-    #binding.pry
-    herpy = []
-    derpy = Release.new(name: result["title"])#, price: result["price"])
-    herpy << derpy
-  end
-  #binding.pry
-  herpy
-  #binding.pry
+# REFERENCE THE GRABBER HERE?
+
+def reviews
+  # pass in a whiskey name and read all the corresponding reviews.
 end
 
+def average_score(whiskey)
+  # I want to be able to enter a whiskey and see the average review score.
+end
 
-# def get_whiskey_release_titles
-#   grabber
-#   response_hash["results"].each do |result|
-#     binding.pry
-#     Review.new(name: result["title"], )
-#   end
-# end
+def price_range
+ # enter a price range and see the highest-scoring whiskeys within that range.
+end
 
-
-puts grabber
+def name_of_method_here
+  # As a user, I want to be able to compose a review for a whiskey and later access that review.
+end
