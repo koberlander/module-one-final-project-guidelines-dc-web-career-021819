@@ -10,3 +10,4 @@ gem "json"
 
 gem "rspec"
 gem "database_cleaner"
+gem "tty"

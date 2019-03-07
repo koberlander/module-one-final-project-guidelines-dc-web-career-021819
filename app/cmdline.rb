@@ -1,4 +1,12 @@
 #!/usr/bin/env ruby
+
+class CLI
+  #instantiate this class in run.rb
+
+end
+
+
+
 require 'tty'
 
 def greeting(name)
