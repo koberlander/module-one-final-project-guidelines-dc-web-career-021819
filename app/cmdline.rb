@@ -1,22 +1,45 @@
 #!/usr/bin/env ruby
 
 class CLI
+
   #instantiate this class in run.rb
+  def self.greeting
+    puts "Hi! Welcome to Whiskey Tango Foxtrot, the deluxe whiskey-picker!"
+  end
+
+  def self.options
+    puts "How can we help you?"
+    puts "1. Get information on a whiskey"
+    puts "2. Review a whiskey"
+    puts "3. Get a recommendation based on price"
+    puts "4. Exit"
+    selection = gets.chomp.to_i
+    self.actions(selection)
+    # return selection
+  end
+
+  def self.actions(selection)
+     case selection
+       when 1
+         puts "Looks like you want to know more about some whiskey!"
+       when 2
+         puts "Seems you've got an opinion, mister! (or lady)"
+       when 3
+         puts "Get the best bang for your buck!"
+       when 4
+         puts "Whatever the opposite of 'howdy' is, I guess!"
+       else
+         puts "Just 1, 2, 3, or 4, please!"
+     end
+  end
 
 end
 
 
 
-require 'tty'
+# require 'tty'
 
-def greeting(name)
-  "Hi #{name}!"
-end
 
-puts "Enter your name:"
-user_name = gets.chomp
-
-puts say_hello(user_name)
 
 # ## desired functions:
 # As a user, I want to be able to enter a whiskey and read all the corresponding reviews.

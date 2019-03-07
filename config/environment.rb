@@ -7,3 +7,4 @@ ActiveRecord::Base.establish_connection(
   database: 'db/big_ol_list.db'
 )
 require_all 'lib'
+require_all 'app'

@@ -20,10 +20,8 @@ def get_whiskeys
   response_string = RestClient.get('https://evening-citadel-85778.herokuapp.com:443/whiskey/')
   response_hash = JSON.parse(response_string)
   response_hash["results"].each do |result|
-    binding.pry
+    # binding.pry
     Review.new(name: result["title"], )
   end
 
 end
-
-get_whiskeys
