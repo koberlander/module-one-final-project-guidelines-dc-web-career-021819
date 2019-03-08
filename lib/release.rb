@@ -15,24 +15,6 @@ class Release < ActiveRecord::Base
   def self.choose_by_brand(input)
     self.find_by brand: input
   end
-  # find review:score given release
-  #  CLI
-
-  # find review:content given release
-  # CLI
-
-  # enter a price range and get whiskeys within range
-  # select price range option thru CLI
-  # price = 1..10
-  # price = 10..20
-  # price = 20..100
-  
-
-
-  # NANI!?!
-  # def self.find_by_price(var)
-  #   self.where(price = )
-
 
 
 

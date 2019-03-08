@@ -10,7 +10,7 @@ class CLI
   def self.options
     puts "How can we help you?"
     # puts "1. Get information on a whiskey"
-    puts "1. Review a whiskey"
+    puts "1. Read about whiskey"
     puts "2. Get a recommendation based on price"
     puts "3. Browse available brands"
     puts "4. Exit"
@@ -52,8 +52,8 @@ class CLI
        # when 1
        #   puts "Looks like you want to know more about some whiskey!"
        when 1
-         puts "Seems you've got an opinion, mister! (or lady)"
-         CLI.options
+         puts "Time to get informed!"
+         # CLI.options
        when 2
          puts "Get the best bang for your buck!"
          puts
