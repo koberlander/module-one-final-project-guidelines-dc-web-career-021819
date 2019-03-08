@@ -5,10 +5,16 @@ class Release < ActiveRecord::Base
   # find price given Release
   # CLI
 
+  # get all brands
+  def self.get_all_brands
+    arr = self.pluck :brand
+    arr.uniq
+  end
+
   # choose whiskey by brand (thru CLI)
   def self.choose_by_brand(input)
     self.find_by brand: input
-
+  end
   # find review:score given release
   #  CLI
 
