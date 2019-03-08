@@ -9,11 +9,11 @@ class CLI
 
   def self.options
     puts "How can we help you?"
-    puts "1. Get information on a whiskey"
-    puts "2. Review a whiskey"
-    puts "3. Get a recommendation based on price"
-    puts "4. Browse available brands"
-    puts "5. Exit"
+    # puts "1. Get information on a whiskey"
+    puts "1. Review a whiskey"
+    puts "2. Get a recommendation based on price"
+    puts "3. Browse available brands"
+    puts "4. Exit"
     selection = gets.chomp.to_i
     self.actions(selection)
     # return selection
@@ -21,22 +21,33 @@ class CLI
 
   def self.actions(selection)
      case selection
+       # when 1
+       #   puts "Looks like you want to know more about some whiskey!"
        when 1
-         puts "Looks like you want to know more about some whiskey!"
-       when 2
          puts "Seems you've got an opinion, mister! (or lady)"
-       when 3
+         CLI.options
+       when 2
          puts "Get the best bang for your buck!"
-         
+         puts
+         puts "Please select a price range!"
+         puts "1. $1 - $10"
+         puts "2. $11 - $20"
+         puts "3. $21 - $100"
+         # price_getter = gets.chomp.to_i
+         # self.#method?(price_getter)
+
+
 # add a way for user to choose brand after .get_all_brands
-       when 4
+       when 3
          puts "Check out our wares!"
          Release.get_all_brands
-
-       when 5
+         CLI.options
+       when 4
          puts "Whatever the opposite of 'howdy' is, I guess!"
+         return
        else
          puts "Just 1, 2, 3, or 4, please!"
+         # CLI.options
      end
   end
 

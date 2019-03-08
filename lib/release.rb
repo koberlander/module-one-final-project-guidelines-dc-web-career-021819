@@ -27,6 +27,14 @@ class Release < ActiveRecord::Base
   # price = 10..20
   # price = 20..100
   #
+
+  # NANI!?!
+  # def self.find_by_price(var)
+  #   self.where(price = )
+
+
+
+
   def self.printer(array)
     array.each.with_index(1) {|thing, index| puts "#{index}. #{thing}"}
   end
