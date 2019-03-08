@@ -35,6 +35,8 @@ class Release < ActiveRecord::Base
       BETWEEN var1 AND var2;
     )
   end
+
+
   # NANI!?!
   # def self.find_by_price(var)
   #   self.where(price = )
