@@ -27,7 +27,14 @@ class Release < ActiveRecord::Base
   # price = 10..20
   # price = 20..100
   #
-
+  def self.price_range(var1, var2)
+    (
+      SELECT name
+      FROM releases
+      WHERE price
+      BETWEEN var1 AND var2;
+    )
+  end
   # NANI!?!
   # def self.find_by_price(var)
   #   self.where(price = )

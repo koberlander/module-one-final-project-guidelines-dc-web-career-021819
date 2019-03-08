@@ -33,8 +33,12 @@ class CLI
          puts "1. $1 - $10"
          puts "2. $11 - $20"
          puts "3. $21 - $100"
-         # price_getter = gets.chomp.to_i
-         # self.#method?(price_getter)
+         price_getter = gets.chomp.to_i
+         self.price_range_rec(price_getter)
+          case price_getter
+            when 1
+              
+          end
 
 
 # add a way for user to choose brand after .get_all_brands
@@ -53,7 +57,8 @@ class CLI
 
 
      def price_range_rec(var)
-       Release.select price <10
+       if
+         Release.price_range(x,y)
 
      end
 
@@ -61,22 +66,10 @@ class CLI
 
   end
 
-
-
-
-# # for input of 1, give list of brands
-#     puts "Please choose a brand from the list."
-#
-#     # user inputs choice
-#         puts "Excellent choice!"
-#         Release.get_all_brands
-#         selection = gets.chomp.to_i
-#         self.NAMEofNEXTmethod(selection)
-#
-# # for input of 2, give list of brands
-#     puts "Please choose a "
-#
-#
+    def self.input
+      case selection
+       when
+    end
 
 
 end
