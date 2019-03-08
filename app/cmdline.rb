@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-
+require "pry"
 class CLI
 
   #instantiate this class in run.rb
@@ -41,13 +41,24 @@ class CLI
        when 3
          puts "Check out our wares!"
          Release.get_all_brands
-         CLI.options
+         # binding.pry
+         # CLI.options
        when 4
          system(`clear`)
        else
          puts "Just 1, 2, 3, or 4, please!"
          # CLI.options
      end
+
+
+
+     def price_range_rec(var)
+       Release.select price <10
+
+     end
+
+
+
   end
 
 
