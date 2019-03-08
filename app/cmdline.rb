@@ -26,6 +26,13 @@ class CLI
     end
   end
 
+  def self.big_reader_huh
+    arr = Review.all
+    arr.each do |review|
+      puts "#{review.user.name.capitalize} thought #{review.release.name} was #{review.content.downcase}"
+    end
+  end
+
 
   def self.price_range_rec(price_getter)
     case price_getter
@@ -53,7 +60,7 @@ class CLI
        #   puts "Looks like you want to know more about some whiskey!"
        when 1
          puts "Time to get informed!"
-         # CLI.options
+         self.big_reader_huh
        when 2
          puts "Get the best bang for your buck!"
          puts
