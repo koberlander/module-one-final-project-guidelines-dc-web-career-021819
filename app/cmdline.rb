@@ -19,14 +19,25 @@ class CLI
     # return selection
   end
 
+  def self.find_price_points(var)
+    arr = Release.where(var)
+    arr.each do |whiskey|
+      puts "We have #{whiskey.name} for $#{whiskey.price}"
+    end
+  end
+
+
   def self.price_range_rec(price_getter)
     case price_getter
       when 1
-        puts Release.where("price < 11")
+        chosen_value = ("price < 11")
+        self.find_price_points(chosen_value)
       when 2
-        Release.where("price > 11 AND price < 20")
+        chosen_value = ("price > 11 AND price < 20")
+        self.find_price_points(chosen_value)
       when 3
-        Release.where("price > 20")
+        chosen_value = ("price > 20")
+        self.find_price_points(chosen_value)
       when 4
         self.options
       when 5
