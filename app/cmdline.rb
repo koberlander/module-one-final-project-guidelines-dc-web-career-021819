@@ -12,7 +12,8 @@ class CLI
     puts "1. Get information on a whiskey"
     puts "2. Review a whiskey"
     puts "3. Get a recommendation based on price"
-    puts "4. Exit"
+    puts "4. Browse available brands"
+    puts "5. Exit"
     selection = gets.chomp.to_i
     self.actions(selection)
     # return selection
@@ -26,14 +27,39 @@ class CLI
          puts "Seems you've got an opinion, mister! (or lady)"
        when 3
          puts "Get the best bang for your buck!"
+         
+# add a way for user to choose brand after .get_all_brands
        when 4
+         puts "Check out our wares!"
+         Release.get_all_brands
+
+       when 5
          puts "Whatever the opposite of 'howdy' is, I guess!"
        else
          puts "Just 1, 2, 3, or 4, please!"
      end
   end
 
+
+
+
+# # for input of 1, give list of brands
+#     puts "Please choose a brand from the list."
+#
+#     # user inputs choice
+#         puts "Excellent choice!"
+#         Release.get_all_brands
+#         selection = gets.chomp.to_i
+#         self.NAMEofNEXTmethod(selection)
+#
+# # for input of 2, give list of brands
+#     puts "Please choose a "
+#
+#
+
+
 end
+
 
 
 

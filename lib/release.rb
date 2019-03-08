@@ -27,8 +27,8 @@ class Release < ActiveRecord::Base
   # price = 10..20
   # price = 20..100
   #
-  def printer(array)
-    array.each {|thing| puts thing}
+  def self.printer(array)
+    array.each.with_index(1) {|thing, index| puts "#{index}. #{thing}"}
   end
 
 
