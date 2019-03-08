@@ -8,7 +8,7 @@ class Release < ActiveRecord::Base
   # get all brands
   def self.get_all_brands
     arr = self.pluck :brand
-    arr.uniq
+    printer(arr.uniq)
   end
 
   # choose whiskey by brand (thru CLI)
@@ -27,5 +27,9 @@ class Release < ActiveRecord::Base
   # price = 10..20
   # price = 20..100
   #
+  def printer(array)
+    array.each {|thing| puts thing}
+  end
+
 
 end
