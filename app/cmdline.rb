@@ -43,8 +43,7 @@ class CLI
          Release.get_all_brands
          CLI.options
        when 4
-         puts "Whatever the opposite of 'howdy' is, I guess!"
-         return
+         system(`clear`)
        else
          puts "Just 1, 2, 3, or 4, please!"
          # CLI.options
